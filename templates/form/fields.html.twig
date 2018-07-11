@@ -1,0 +1,13 @@
+{% block form_row %}
+    {% spaceless %}
+        {% set row_class = attr['data-row-class'] | default('3') %}
+        <div class="col-md-{{ row_class }}">
+            <div class="form-group">
+                {{ form_label(form) }}
+                {{ form_errors(form) }}
+                {{ form_widget(form, {'attr': {'class': 'form-control'}}) }}
+                {{ form_help(form) }}
+            </div>
+        </div>
+    {% endspaceless %}
+{% endblock form_row %}

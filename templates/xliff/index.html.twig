@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'form/fields.html.twig' %}
+
+
+{% block body %}
+
+{{ form_start(form) }}
+    <div class="container">
+        <h3>Upload a XLF File or insert the fields manually below</h3>
+        {{ form_row(form.xlfFile) }}
+    </div>
+
+    <div class="container elements" data-prototype="{{ form_widget(form.xliffElements.vars.prototype)|e('html_attr') }}">
+        <h3>File Informations</h3>
+        <div class="row">
+            {{ form_row(form.sourceLanguage) }}
+            {{ form_row(form.targetLanguage) }}
+            {{ form_row(form.productName) }}
+        </div>
+
+        <h3>Elements</h3>
+        {# iterate over each existing xliff element and render the fields #}
+        {% for xliffElement in form.xliffElements %}
+            <div class="row">
+                {{ form_row(xliffElement.source) }}
+                {{ form_row(xliffElement.target) }}
+                {{ form_row(xliffElement.id) }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="container">
+        {{ form_widget(form.save, { 'label': 'Upload File or generate XLF', 'attr': {'class': 'btn btn-primary'}  }) }}
+    </div>
+{{ form_end(form) }}
+
+{% endblock %}
