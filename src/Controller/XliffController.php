@@ -61,13 +61,13 @@ class XliffController extends Controller
                     $xliffElements = [];
                     foreach ($array['file']['body']['trans-unit'] as $key=>$element){
                         $xliffElements[$key] = new XliffElement();
-                        if(is_string($element['target'])){
+                        if(isset($element['target'])){
                            $xliffElements[$key]->setTarget($element['target']);
                         }
-                        if(is_string($element['source'])){
+                        if(isset($element['source'])){
                             $xliffElements[$key]->setSource($element['source']);
                         }
-                        if(is_string($element['target'])){
+                        if(isset($element['@attributes']['id'])){
                             $xliffElements[$key]->setId($element['@attributes']['id']);
                         }
 
