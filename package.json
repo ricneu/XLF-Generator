@@ -22,6 +22,12 @@
     "build": "./node_modules/.bin/encore production"
   },
   "dependencies": {
-    "npm": "^6.1.0"
+    "ajv": "^6.5.2",
+    "npm": "^6.1.0",
+    "popper.js": "^1.14.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frusciante1988/XLF-Generator.git"
   }
 }
