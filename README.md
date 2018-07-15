@@ -1,7 +1,7 @@
 XLF Generator
 ========================
 
-With this Symfony Tool you can upload and/or generate new XLF Files with an Form Input.
+With this Symfony Tool you can upload and/or generate new XLF Files with a Form Input.
 
 ![Screenshot of the XLF Generator Tool](assets/img/xlfgenerator.jpg "Screenshot of the XLF Generator Tool")
 
