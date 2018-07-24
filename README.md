@@ -29,7 +29,8 @@ command to run the built-in web server and access the application in your
 browser at <http://localhost:8000>:
 
 ```bash
-$ cd rnxlffgen/
+$ cd XLF-Genearator/
+$ mkdir translations
 $ php bin/console server:run
 ```
 
